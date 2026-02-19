@@ -13,7 +13,7 @@ export default function BarelyZeroStory() {
         <FadeIn className="w-full lg:w-[60%]" direction="left">
           <div className="relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
             <Image
-              src="https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI167441.jpg?v=1762145917&width=1200"
+              src="https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI167441.jpg?v=1762145917&width=1600"
               alt="Barely Zero Strap Bra — The original. Still the standard."
               fill
               className="object-cover"

@@ -183,9 +183,9 @@ export const colorMap: Record<string, string> = {
 
 // Hero images for collection pages
 export const collectionHeroImages = {
-  bras: 'https://neiwai.life/cdn/shop/files/20250908-131826.png?v=1757362737&width=1920',
-  briefs: 'https://neiwai.life/cdn/shop/files/20250908-104305.jpg?v=1757370825&width=1920',
-  leggings: 'https://neiwai.life/cdn/shop/files/20210702NEIWAI0823.jpg?v=1729635212&width=1920',
-  ourWorld: 'https://neiwai.life/cdn/shop/files/AboutUs_min.png?v=1722883181&width=1920',
-  atelier: 'https://neiwai.life/cdn/shop/files/20250908-104140.jpg?v=1757353319&width=1920',
+  bras: 'https://neiwai.life/cdn/shop/files/20250908-131826.png?v=1757362737&width=2560',
+  briefs: 'https://neiwai.life/cdn/shop/files/20250908-104305.jpg?v=1757370825&width=2560',
+  leggings: 'https://neiwai.life/cdn/shop/files/20210702NEIWAI0823.jpg?v=1729635212&width=2560',
+  ourWorld: 'https://neiwai.life/cdn/shop/files/AboutUs_min.png?v=1722883181&width=2560',
+  atelier: 'https://neiwai.life/cdn/shop/files/20250908-104140.jpg?v=1757353319&width=2560',
 } as const;

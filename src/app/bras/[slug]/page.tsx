@@ -106,8 +106,12 @@ export default function BrasProductPage() {
 
   const accordionItems = [
     {
-      title: 'Composition & Care',
-      content: `${product.details.composition}\n\n${product.details.care}`,
+      title: 'Materials',
+      content: product.details.composition,
+    },
+    {
+      title: 'Care Instructions',
+      content: product.details.care,
     },
     {
       title: 'Fit Guide',
@@ -255,8 +259,16 @@ export default function BrasProductPage() {
               </div>
             </div>
 
+            {/* Always-visible materials summary */}
+            <div className="mt-6 pt-5 border-t border-sand">
+              <p className="font-body text-[12px] text-taupe leading-relaxed">
+                <span className="tracking-[0.1em] uppercase mr-2">Materials</span>
+                {product.details.composition}
+              </p>
+            </div>
+
             <FadeIn delay={0.25}>
-              <div className="mt-8">
+              <div className="mt-4">
                 <ProductAccordion items={accordionItems} />
               </div>
             </FadeIn>

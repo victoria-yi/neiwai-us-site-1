@@ -13,7 +13,7 @@ export default function ScallopStory() {
         <FadeIn className="w-full lg:w-[60%]" direction="right">
           <div className="relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
             <Image
-              src="https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI158792.jpg?v=1764127456&width=1200"
+              src="https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI158792.jpg?v=1764127456&width=1600"
               alt="Barely Zero Scallop Bra — 3D precision-molded, invisible under everything"
               fill
               className="object-cover"

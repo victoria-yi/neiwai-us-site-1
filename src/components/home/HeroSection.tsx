@@ -35,13 +35,13 @@ export default function HeroSection({
         className="absolute inset-0 scale-110"
       >
         <Image
-          src="https://neiwai.life/cdn/shop/files/20250908-131826.png?v=1757362737&width=1920"
+          src="https://neiwai.life/cdn/shop/files/20250908-131826.png?v=1757362737&width=2160"
           alt="NEIWAI — A second skin, reimagined"
           fill
           className="object-cover object-top"
           priority
           sizes="100vw"
-          quality={90}
+          quality={95}
         />
       </motion.div>
 

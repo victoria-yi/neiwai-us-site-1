@@ -214,7 +214,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16969.jpg?v=1757376271&width=800',
     description: 'Thin adjustable straps, no clasps, no underwire. The Strap Bra is the piece that defined the Barely Zero category — a bra worn for its absence rather than its presence. Made from CloudFit nylon, an adaptive blend developed to move with the body without binding.',
     details: {
-      composition: '68% CloudFit nylon blend, 32% Spandex',
+      composition: '68% Polyamide, 32% Spandex',
       care: 'Dissolve a gentle detergent in cold water (86°F/30°C max) and fully immerse. Gently press/knead, then rinse. Hang or lay flat to dry in a cool, shaded place.',
       fit: 'One size. Wire-free, foam-free, fully seamless — designed to disappear. Adapts across a wide range of body types.',
     },
@@ -270,7 +270,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI162012_eccd6926-58ef-4a36-9ddd-f76beec553d9.jpg?v=1764127456&width=800',
     description: 'A delicate scalloped V-neckline and fixed molded cups — the Scallop Bra brings structure to the Barely Zero collection without adding weight. Pull-on with no clasps or underwire. The cups stay fixed, the neckline stays crisp, and the silhouette remains invisible under clothing.',
     details: {
-      composition: 'Barely Zero CloudFit nylon blend',
+      composition: '68% Polyamide, 32% Spandex',
       care: 'Hand wash cold. Lay flat to dry. Do not bleach. Cup retains shape wash after wash.',
       fit: 'Available in XS-S and M-L. Fixed cup with sculpted shape — slightly snug for natural shaping.',
     },
@@ -324,7 +324,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI162012.jpg?v=1762149070&width=800',
     description: 'The Scallop Clasp Bra adds a wave-inspired back clasp to the Fixed Cup Wavy silhouette — an upgrade that introduces fine-tuned fit without changing what the style does well. Bisous Cups™ for breathable, natural shaping. Flo Support™ for stay-put structure. The scallop neckline remains.',
     details: {
-      composition: 'Barely Zero CloudFit nylon blend',
+      composition: '68% Polyamide, 32% Spandex',
       care: 'Hand wash cold. Lay flat to dry. Do not bleach. Do not iron.',
       fit: 'Available in XS-S and M-L. Minimal clasp-back closure for an adjustable, precise fit.',
     },
@@ -354,7 +354,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/BarelyZeroCamisole_1715.jpg?v=1762136811&width=800',
     description: 'Barely Zero integral cups built into a camisole body — full support without a separate bra underneath. The hem falls cleanly as a layer or on its own. The construction is the same as the rest of the Barely Zero collection: seamless, adaptive, designed to disappear.',
     details: {
-      composition: 'Barely Zero CloudFit nylon blend',
+      composition: '68% Polyamide, 32% Spandex',
       care: 'Hand wash cold or machine wash gentle. Lay flat to dry.',
       fit: 'Available in XS-S and M-L. Thin adjustable straps. Smooth seamless construction — no visible lines under any fit.',
     },
@@ -386,7 +386,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/7_2NEIWAIOrange23415.jpg?v=1762149070&width=800',
     description: 'Flo Support™ and Bisous Cups™ — two technologies developed to bring the Barely Zero experience to fuller bust proportions. Structured where support is needed. Weightless everywhere else. Back clasp for adjustable fit. Note: this bra adapts to the body over the first few wears.',
     details: {
-      composition: 'Barely Zero CloudFit nylon blend',
+      composition: '68% Polyamide, 32% Spandex',
       care: 'Hand wash cold. Lay flat to dry. Do not bleach. Do not iron.',
       fit: 'Available in S–XL. If you\'re in between sizes, size up. Bra adapts to the body after first few wears.',
     },
@@ -415,7 +415,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16364_2087098d-adca-42e7-89da-ef4c3e9f3af5.jpg?v=1762149203&width=800',
     description: 'The Curvy Bra extends the Barely Zero wireless construction to a fuller cup range — wider straps, deeper anchored cups, and the same adaptive stretch fabric as the rest of the collection. Designed for everyday wear, postpartum, and body changes that standard sizing doesn\'t account for.',
     details: {
-      composition: 'Barely Zero CloudFit nylon blend',
+      composition: '68% Polyamide, 32% Spandex',
       care: 'Hand wash cold. Lay flat to dry. Do not bleach.',
       fit: 'Available in S–XL. Wider straps distribute weight evenly. Deeper anchored cups for fuller proportions.',
     },
@@ -443,7 +443,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/products/0622neiwai22768.jpg?v=1715266180&width=800',
     description: 'Maximum support in minimum bra. Extra-wide anchored cups and reinforced band provide substantial lift without a single wire. Designed for DD+ cup sizes that need structure without sacrifice.',
     details: {
-      composition: 'Barely Zero CloudFit nylon blend with reinforced band',
+      composition: '68% Polyamide, 32% Spandex — reinforced band',
       care: 'Hand wash cold. Lay flat to dry. Do not bleach. Do not iron.',
       fit: 'Available in S/M and L/XL. Wider band and deeper cups for extra support.',
     },
@@ -474,7 +474,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16738.jpg?v=1762136724&width=800',
     description: 'A knit-silk blend in the Barely Zero construction — the most breathable bra in the collection. Back clasp closure with anchored cups, engineered for warm weather and sensitive skin. Lighter than it looks. Cooler than you expect.',
     details: {
-      composition: 'Barely Zero knit-silk nylon blend',
+      composition: '52% Polyamide, 36% Spandex, 12% Silk',
       care: 'Hand wash cold. Lay flat to dry. Do not bleach. Do not iron.',
       fit: 'Available in XS-S and M-L. Back clasp with adjustable band. Anchored cups.',
     },
@@ -566,7 +566,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/WechatIMG55bc0a6f54fd27e9a6f6e8c12e84c4e4.jpg?v=1747866499&width=800',
     description: 'A fixed shaping panel prevents the roll and fold that undoes most strapless styles — the critical construction detail in the Bandeau Bra. Breathable stretch fabric, stay-put coverage, and three wear configurations: strapless, standard straps, or crossed.',
     details: {
-      composition: 'Breathable stretch poly-Spandex blend',
+      composition: '82% Polyester, 18% Spandex',
       care: 'Hand wash cold. Lay flat to dry.',
       fit: 'Available in XS–L. Three ways to wear: strapless, standard straps, or crossed at the back. Wire-free.',
     },
@@ -689,7 +689,7 @@ export const brasProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/products/0622neiwai22768.jpg?v=1715266180&width=800',
     description: 'Molded cups, soft push-up padding, and a low V-neckline — a wire-free push-up construction that enhances shape without hardware or structural foam. Light enough to feel incidental. The Featherlight fabric maintains the barely-there feel the name promises.',
     details: {
-      composition: 'Featherlight poly-Spandex blend',
+      composition: '80% Polyester, 20% Spandex',
       care: 'Hand wash cold. Lay flat to dry. Do not bleach.',
       fit: 'Available in XS–L. Low V-neckline. Wire-free despite structured cup construction.',
     },
@@ -723,7 +723,7 @@ export const briefsProducts: Product[] = [
     hoverImage: 'https://neiwai.life/cdn/shop/files/20231124-NEIWAI_00263_63699f2c-48fc-4820-9e6a-185195902b4e.jpg?v=1753306860&width=800',
     description: 'A silicone grip along the rim keeps the Superlight Brief in position through activity — no riding, no adjustment. The back panel is seamless and non-restrictive. Built for movement without the bulk: lightweight, breathable, and invisible under anything.',
     details: {
-      composition: 'Barely Zero adaptive nylon blend',
+      composition: '68% Polyamide, 32% Spandex',
       care: 'Machine wash cold in lingerie bag. Lay flat to dry.',
       fit: 'One size. Silicone grip along waist rim holds position through workouts and everyday movement.',
     },

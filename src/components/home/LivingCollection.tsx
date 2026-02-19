@@ -20,7 +20,7 @@ export default function LivingCollection() {
       <div className="relative mb-16 lg:mb-24">
         <div className="h-[50vh] lg:h-[60vh] overflow-hidden relative">
           <Image
-            src="https://neiwai.life/cdn/shop/files/20210702NEIWAI0823.jpg?v=1729635212&width=1920"
+            src="https://neiwai.life/cdn/shop/files/20210702NEIWAI0823.jpg?v=1729635212&width=2560"
             alt="Barely Zero Briefs and Leggings"
             fill
             className="object-cover"
