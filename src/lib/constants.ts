@@ -50,18 +50,10 @@ export const megaMenuData = {
       {
         title: 'Shop by Need',
         links: [
-          { label: 'For Fuller Busts →', href: '/bras?filter=fuller-busts' },
-          { label: 'Curvy Clasp Bra', href: '/bras/barely-zero-curvy-clasp-bra' },
-          { label: 'Curvy Bra', href: '/bras/barely-zero-curvy-bra' },
-          { label: 'Strapless & Bandeau →', href: '/bras?filter=strapless' },
-          { label: 'Bandeau Bra', href: '/bras/bandeau-bra' },
-          { label: 'Essential Bandeau Bra', href: '/bras/essential-bandeau-bra' },
-          { label: 'Natural Fiber →', href: '/bras?filter=natural-fiber' },
-          { label: 'Pure Comfort Triangle Bra', href: '/bras/pure-comfort-triangle-bra' },
-          { label: 'UltraFlex Bra', href: '/bras/ultraflex-bra' },
-          { label: 'Deep V & Push-Up →', href: '/bras?filter=deep-v' },
-          { label: 'Swan Bra', href: '/bras/swan-bra' },
-          { label: 'Featherlight Push Up Bra', href: '/bras/featherlight-push-up-bra' },
+          { label: 'For Fuller Busts', href: '/bras?filter=fuller-busts' },
+          { label: 'Strapless & Bandeau', href: '/bras?filter=strapless' },
+          { label: 'Natural Fiber', href: '/bras?filter=natural-fiber' },
+          { label: 'Deep V & Push-Up', href: '/bras?filter=deep-v' },
         ],
       },
       {
