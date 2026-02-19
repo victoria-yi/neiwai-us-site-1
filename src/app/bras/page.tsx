@@ -1,0 +1,83 @@
+'use client';
+
+import { useState, useMemo } from 'react';
+import CollectionHero from '@/components/collection/CollectionHero';
+import FilterBar from '@/components/collection/FilterBar';
+import ProductGrid from '@/components/product/ProductGrid';
+import EditorialBreak from '@/components/collection/EditorialBreak';
+import { brasProducts } from '@/lib/products';
+
+const filters = ['All', 'Barely Zero', 'Natural Fiber', 'Strapless', 'For Fuller Busts'];
+
+// Map filter label → line/subcategory values
+function applyFilter(filter: string) {
+  if (filter === 'All') return brasProducts;
+  if (filter === 'Barely Zero') return brasProducts.filter((p) => p.line === 'barely-zero');
+  if (filter === 'Natural Fiber') return brasProducts.filter((p) => p.line === 'pure-comfort' || p.line === 'ultraflex');
+  if (filter === 'Strapless') return brasProducts.filter((p) => p.line === 'bandeau');
+  if (filter === 'For Fuller Busts') return brasProducts.filter(
+    (p) => p.slug.includes('curvy') || p.slug.includes('curve')
+  );
+  return brasProducts;
+}
+
+export default function BrasPage() {
+  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeSort, setActiveSort] = useState('Curated');
+
+  const filteredProducts = useMemo(() => {
+    let products = applyFilter(activeFilter);
+
+    if (activeSort === 'Price') {
+      products = [...products].sort((a, b) => a.price - b.price);
+    } else if (activeSort === 'New Arrivals') {
+      products = [...products].sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+    }
+
+    return products;
+  }, [activeFilter, activeSort]);
+
+  const firstBatch = filteredProducts.slice(0, 4);
+  const secondBatch = filteredProducts.slice(4);
+
+  return (
+    <>
+      <CollectionHero
+        headline="Bras"
+        subheadline="Engineered to disappear."
+        description="Seventeen bras built on one idea — support you forget you're wearing. Led by the Barely Zero collection, the standard for invisible comfort."
+        image="https://neiwai.life/cdn/shop/files/20250908-131826.png?v=1757362737&width=1920"
+      />
+
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-8 lg:py-12">
+        <FilterBar
+          filters={filters}
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+          activeSort={activeSort}
+          onSortChange={setActiveSort}
+        />
+
+        <div className="mt-12 lg:mt-16">
+          <ProductGrid products={firstBatch} />
+
+          {secondBatch.length > 0 && (
+            <>
+              <EditorialBreak
+                quote="Can you feel nothing at all? That was the question we started with."
+                attribution="NEIWAI Material Lab"
+              />
+              <ProductGrid products={secondBatch} />
+            </>
+          )}
+        </div>
+
+        <div className="text-center py-16 lg:py-24">
+          <p className="font-body text-[13px] text-taupe">
+            You&apos;ve explored the entire collection
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
