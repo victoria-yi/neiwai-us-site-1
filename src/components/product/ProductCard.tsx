@@ -63,8 +63,8 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
 
           {/* Color dots */}
           {product.colors.length > 1 && (
-            <div className="flex gap-1.5 mt-2">
-              {product.colors.slice(0, 5).map((color) => (
+            <div className="flex flex-wrap gap-1.5 mt-2">
+              {product.colors.map((color) => (
                 <span
                   key={color.name}
                   className="w-3 h-3 rounded-full border border-sand"
@@ -72,11 +72,6 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
                   title={color.name}
                 />
               ))}
-              {product.colors.length > 5 && (
-                <span className="font-body text-[11px] text-taupe ml-0.5">
-                  +{product.colors.length - 5}
-                </span>
-              )}
             </div>
           )}
 

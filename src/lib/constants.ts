@@ -134,22 +134,22 @@ export const megaMenuData = {
 
 export const footerLinks = {
   ourWorld: [
-    { label: 'Our Philosophy', href: '/our-world' },
+    { label: 'Our Philosophy', href: 'https://neiwai.life/pages/our-story' },
     { label: 'The Atelier', href: '/our-world/atelier' },
     { label: 'Journal', href: '/our-world/journal' },
-    { label: 'Careers', href: '#' },
+    { label: 'Careers', href: 'https://neiwai.life/pages/press' },
   ],
   customerCare: [
-    { label: 'Shipping & Returns', href: '#' },
-    { label: 'Size Guide', href: '#' },
-    { label: 'Contact Us', href: '#' },
-    { label: 'FAQ', href: '#' },
-    { label: 'Archive Sale', href: '#' },
+    { label: 'Shipping & Returns', href: 'https://neiwai.life/pages/shipping-returns' },
+    { label: 'Size Guide', href: 'https://neiwai.life/pages/size-guide' },
+    { label: 'Contact Us', href: 'https://neiwai.life/pages/contact-us' },
+    { label: 'FAQ', href: 'https://neiwai.life/pages/faq' },
+    { label: 'Archive Sale', href: 'https://neiwai.life/collections/sale-collection' },
   ],
   follow: [
-    { label: 'Instagram', href: 'https://instagram.com/neiwai' },
-    { label: 'Pinterest', href: 'https://pinterest.com/neiwai' },
-    { label: 'TikTok', href: 'https://tiktok.com/@neiwai' },
+    { label: 'Instagram', href: 'https://www.instagram.com/neiwaiofficial/?hl=en' },
+    { label: 'Pinterest', href: 'https://www.pinterest.ca/neiwaiofficial/' },
+    { label: 'TikTok', href: 'https://www.tiktok.com/@neiwai.life' },
   ],
 } as const;
 

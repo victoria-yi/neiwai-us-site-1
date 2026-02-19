@@ -8,11 +8,20 @@ import { leggingsProducts } from '@/lib/products';
 
 const filters = ['All', 'Leggings', 'Shorts'];
 
+// Curated order — mirrors mega menu: Flow Leggings → Lycra Leggings → Shorts
+const CURATED_ORDER = ['leg-002', 'leg-001', 'leg-003'];
+
+function sortCurated(products: typeof leggingsProducts) {
+  return [...products].sort(
+    (a, b) => CURATED_ORDER.indexOf(a.id) - CURATED_ORDER.indexOf(b.id)
+  );
+}
+
 function applyFilter(filter: string) {
-  if (filter === 'All') return leggingsProducts;
+  if (filter === 'All') return sortCurated(leggingsProducts);
   if (filter === 'Leggings') return leggingsProducts.filter((p) => p.subcategory === 'leggings');
   if (filter === 'Shorts') return leggingsProducts.filter((p) => p.subcategory === 'shorts');
-  return leggingsProducts;
+  return sortCurated(leggingsProducts);
 }
 
 export default function LeggingsPage() {

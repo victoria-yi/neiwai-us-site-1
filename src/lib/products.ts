@@ -75,11 +75,11 @@ export const brasProducts: Product[] = [
     ],
     sizes: ['One Size'],
     images: [
+      'https://neiwai.life/cdn/shop/files/0216NEIWAI32653.jpg?v=1762136724&width=800',
       'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI167441.jpg?v=1762145917&width=800',
-      'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI17296.jpg?v=1762145917&width=800',
       'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16086.jpg?v=1762136724&width=800',
     ],
-    hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI17296.jpg?v=1762145917&width=800',
+    hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI167441.jpg?v=1762145917&width=800',
     colorImages: {
       'Eggwhite': [
         'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16738.jpg?v=1762136724&width=800',
@@ -157,11 +157,11 @@ export const brasProducts: Product[] = [
     ],
     sizes: ['One Size'],
     images: [
+      'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI18218.jpg?v=1762210850&width=800',
       'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI17255.jpg?v=1762149203&width=800',
       'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16364_2087098d-adca-42e7-89da-ef4c3e9f3af5.jpg?v=1762149203&width=800',
-      'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI18218.jpg?v=1762210850&width=800',
     ],
-    hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16364_2087098d-adca-42e7-89da-ef4c3e9f3af5.jpg?v=1762149203&width=800',
+    hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI17255.jpg?v=1762149203&width=800',
     colorImages: {
       'Treacly Almond': [
         'https://neiwai.life/cdn/shop/files/0216NEIWAI32312_ec5dae56-2052-4109-a8bb-0142a3b89c45.jpg?v=1757373136&width=800',
@@ -263,11 +263,13 @@ export const brasProducts: Product[] = [
     ],
     sizes: ['XS-S', 'M-L'],
     images: [
+      'https://neiwai.life/cdn/shop/files/Barely_Zero_Fixed_Cup_Wavy_3x4_1.jpg?v=1770860761&width=800',
       'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI158792.jpg?v=1764127456&width=800',
       'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI162012_eccd6926-58ef-4a36-9ddd-f76beec553d9.jpg?v=1764127456&width=800',
-      'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI178131.jpg?v=1762145975&width=800',
+      'https://neiwai.life/cdn/shop/files/20250604-162624_1.jpg?v=1770860761&width=800',
+      'https://neiwai.life/cdn/shop/files/20250604-162636_1_33475b81-7dbe-4908-bebf-24c9947db8f8.jpg?v=1770860761&width=800',
     ],
-    hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI162012_eccd6926-58ef-4a36-9ddd-f76beec553d9.jpg?v=1764127456&width=800',
+    hoverImage: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI158792.jpg?v=1764127456&width=800',
     description: 'A delicate scalloped V-neckline and fixed molded cups — the Scallop Bra brings structure to the Barely Zero collection without adding weight. Pull-on with no clasps or underwire. The cups stay fixed, the neckline stays crisp, and the silhouette remains invisible under clothing.',
     details: {
       composition: '68% Polyamide, 32% Spandex',
@@ -379,11 +381,11 @@ export const brasProducts: Product[] = [
     ],
     sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://neiwai.life/cdn/shop/files/BZ_Fixed_Cup_Clasp_Bra_Black_3x4_1.jpg?v=1728596897&width=800',
       'https://neiwai.life/cdn/shop/files/NW221WU11103_BarelyZeroFixedCupClasp_Caramel_OM_Side_5_1.jpg?v=1737920488&width=800',
+      'https://neiwai.life/cdn/shop/files/BZ_Fixed_Cup_Clasp_Bra_Black_3x4_1.jpg?v=1728596897&width=800',
       'https://neiwai.life/cdn/shop/files/NW221WU11103-BZ-Fixed-Cup-Clasp-Bra-Treacly-Almond_1_1.jpg?v=1701045729&width=800',
     ],
-    hoverImage: 'https://neiwai.life/cdn/shop/files/NW221WU11103_BarelyZeroFixedCupClasp_Caramel_OM_Side_5_1.jpg?v=1737920488&width=800',
+    hoverImage: 'https://neiwai.life/cdn/shop/files/BZ_Fixed_Cup_Clasp_Bra_Black_3x4_1.jpg?v=1728596897&width=800',
     description: 'Flo Support™ and Bisous Cups™ — two technologies developed to bring the Barely Zero experience to fuller bust proportions. Structured where support is needed. Weightless everywhere else. Back clasp for adjustable fit. Note: this bra adapts to the body over the first few wears.',
     details: {
       composition: '68% Polyamide, 32% Spandex',
@@ -467,11 +469,12 @@ export const brasProducts: Product[] = [
     ],
     sizes: ['XS-S', 'M-L'],
     images: [
+      'https://neiwai.life/cdn/shop/files/FlatLay_CroppingTemplate_Blue_9_117a7b3d-b5f1-4aef-8fe2-3e974fc7f982.jpg?v=1768934253&width=800',
       'https://neiwai.life/cdn/shop/files/NO261WU1123_1.jpg?v=1768529492&width=800',
       'https://neiwai.life/cdn/shop/files/NO261WU1123_2.jpg?v=1768934303&width=800',
       'https://neiwai.life/cdn/shop/files/NO261WU1123.jpg?v=1768934303&width=800',
     ],
-    hoverImage: 'https://neiwai.life/cdn/shop/files/NO261WU1123_2.jpg?v=1768934303&width=800',
+    hoverImage: 'https://neiwai.life/cdn/shop/files/NO261WU1123_1.jpg?v=1768529492&width=800',
     description: 'A knit-silk blend in the Barely Zero construction — the most breathable bra in the collection. Back clasp closure with anchored cups, engineered for warm weather and sensitive skin. Lighter than it looks. Cooler than you expect.',
     details: {
       composition: '52% Polyamide, 36% Spandex, 12% Silk',

@@ -9,16 +9,31 @@ import { brasProducts } from '@/lib/products';
 
 const filters = ['All', 'Barely Zero', 'Natural Fiber', 'Strapless', 'For Fuller Busts'];
 
+// Curated display order — mirrors the pull-down mega menu sequence
+const CURATED_ORDER = [
+  'bra-003', 'bra-001', 'bra-002', 'bra-004', 'bra-005', 'bra-006', 'bra-010',
+  'bra-007', 'bra-008', 'bra-009',
+  'bra-011', 'bra-012',
+  'bra-013', 'bra-014',
+  'bra-015', 'bra-016', 'bra-017',
+];
+
+function sortCurated(products: typeof brasProducts) {
+  return [...products].sort(
+    (a, b) => CURATED_ORDER.indexOf(a.id) - CURATED_ORDER.indexOf(b.id)
+  );
+}
+
 // Map filter label → line/subcategory values
 function applyFilter(filter: string) {
-  if (filter === 'All') return brasProducts;
-  if (filter === 'Barely Zero') return brasProducts.filter((p) => p.line === 'barely-zero');
+  if (filter === 'All') return sortCurated(brasProducts);
+  if (filter === 'Barely Zero') return sortCurated(brasProducts.filter((p) => p.line === 'barely-zero'));
   if (filter === 'Natural Fiber') return brasProducts.filter((p) => p.line === 'pure-comfort' || p.line === 'ultraflex');
   if (filter === 'Strapless') return brasProducts.filter((p) => p.line === 'bandeau');
   if (filter === 'For Fuller Busts') return brasProducts.filter(
     (p) => p.slug.includes('curvy') || p.slug.includes('curve')
   );
-  return brasProducts;
+  return sortCurated(brasProducts);
 }
 
 export default function BrasPage() {

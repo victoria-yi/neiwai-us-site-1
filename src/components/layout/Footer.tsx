@@ -31,6 +31,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="font-body text-[13px] text-stone hover:text-cream transition-colors duration-300"
                   >
                     {link.label}
@@ -50,6 +51,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="font-body text-[13px] text-stone hover:text-cream transition-colors duration-300"
                   >
                     {link.label}
@@ -114,16 +116,27 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 lg:mt-24 pt-8 border-t border-stone/20 flex flex-col items-center gap-4">
-          <Link
-            href="/"
-            className="font-display text-[20px] font-light tracking-[0.2em] text-cream"
-          >
-            NEIWAI
-          </Link>
-          <p className="font-body text-[12px] text-stone/60">
-            © 2026 NEIWAI.
+        <div className="mt-16 lg:mt-24 pt-6 border-t border-stone/20 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="font-body text-[12px] text-stone/50">
+            Copyright © 2026 NEIWAI. All rights reserved.
           </p>
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 justify-center md:justify-end">
+            {[
+              { label: 'Privacy Policy', href: 'https://neiwai.life/pages/privacy-policy' },
+              { label: 'Terms of Service', href: 'https://neiwai.life/pages/terms-of-service' },
+              { label: 'Accessibility', href: '#' },
+            ].map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="font-body text-[12px] text-stone/50 hover:text-stone transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>
