@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import ProductGallery from '@/components/product/ProductGallery';
@@ -8,6 +8,7 @@ import SizeSelector from '@/components/product/SizeSelector';
 import ColorSwatches from '@/components/product/ColorSwatches';
 import AddToBag from '@/components/product/AddToBag';
 import ProductAccordion from '@/components/product/ProductAccordion';
+import PDPStickyBar from '@/components/product/PDPStickyBar';
 import ProductCard from '@/components/product/ProductCard';
 import FadeIn from '@/components/ui/FadeIn';
 import Overline from '@/components/ui/Overline';
@@ -26,6 +27,7 @@ export default function BriefsProductPage() {
 
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const addToBagRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (product && product.sizes.length === 1) {
@@ -93,7 +95,7 @@ export default function BriefsProductPage() {
 
           {/* Product Info — 45% */}
           <div className="w-full lg:w-[45%] lg:sticky lg:top-24 lg:self-start">
-            <FadeIn>
+            <FadeIn immediate>
               <Overline>{lineLabel}</Overline>
 
               <h1 className="font-display text-[22px] lg:text-[24px] font-light text-ink mt-3">
@@ -114,7 +116,7 @@ export default function BriefsProductPage() {
             </FadeIn>
 
             {/* Color Selection */}
-            <FadeIn delay={0.1}>
+            <FadeIn delay={0.1} immediate>
               <div className="mt-7">
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-body text-[13px] text-ink">
@@ -131,7 +133,7 @@ export default function BriefsProductPage() {
 
             {/* Size Selection */}
             {product.sizes.length > 1 && (
-              <FadeIn delay={0.15}>
+              <FadeIn delay={0.15} immediate>
                 <div className="mt-5">
                   <div className="flex items-center justify-between mb-3">
                     <span className="font-body text-[13px] text-ink">Size</span>
@@ -149,7 +151,7 @@ export default function BriefsProductPage() {
             )}
 
             {product.sizes.length === 1 && (
-              <FadeIn delay={0.15}>
+              <FadeIn delay={0.15} immediate>
                 <div className="mt-5 flex items-center gap-2">
                   <span className="font-body text-[13px] text-ink">Size:</span>
                   <span className="font-body text-[13px] text-taupe">{product.sizes[0]}</span>
@@ -157,8 +159,8 @@ export default function BriefsProductPage() {
               </FadeIn>
             )}
 
-            <FadeIn delay={0.2}>
-              <div className="mt-7">
+            <FadeIn delay={0.2} immediate>
+              <div ref={addToBagRef} className="mt-7">
                 <AddToBag disabled={!selectedSize} />
               </div>
             </FadeIn>
@@ -189,7 +191,7 @@ export default function BriefsProductPage() {
               </p>
             </div>
 
-            <FadeIn delay={0.25}>
+            <FadeIn delay={0.25} immediate>
               <div className="mt-4">
                 <ProductAccordion items={accordionItems} />
               </div>
@@ -198,10 +200,21 @@ export default function BriefsProductPage() {
         </div>
       </div>
 
+      {/* Sticky Add to Bag bar */}
+      <PDPStickyBar
+        product={product}
+        selectedColor={selectedColor}
+        selectedSize={selectedSize}
+        activeColors={product.colors}
+        onColorSelect={setSelectedColor}
+        onSizeSelect={setSelectedSize}
+        addToBagRef={addToBagRef}
+      />
+
       {/* Complete the Look */}
       {relatedProducts.length > 0 && (
         <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-16 lg:pb-32 lg:py-24 border-t border-sand">
-          <FadeIn>
+          <FadeIn immediate>
             <Overline>Complete the Look</Overline>
           </FadeIn>
 

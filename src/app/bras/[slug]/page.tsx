@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import ProductGallery from '@/components/product/ProductGallery';
@@ -12,6 +12,7 @@ import ProductCard from '@/components/product/ProductCard';
 import VariantSelector from '@/components/product/VariantSelector';
 import TechnologyStory from '@/components/product/TechnologyStory';
 import VariantComparison from '@/components/product/VariantComparison';
+import PDPStickyBar from '@/components/product/PDPStickyBar';
 import FadeIn from '@/components/ui/FadeIn';
 import Overline from '@/components/ui/Overline';
 import { getProductBySlug, getRelatedProducts } from '@/lib/products';
@@ -47,6 +48,7 @@ export default function BrasProductPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
+  const addToBagRef = useRef<HTMLDivElement>(null);
 
   const hasVariants = !!(product?.variants && product.variants.length > 0);
 
@@ -147,7 +149,7 @@ export default function BrasProductPage() {
 
           {/* Product Info — 45% */}
           <div className="w-full lg:w-[45%] lg:sticky lg:top-24 lg:self-start">
-            <FadeIn>
+            <FadeIn immediate>
               <Overline>{lineLabel}</Overline>
 
               <h1 className="font-display text-[22px] lg:text-[24px] font-light text-ink mt-3">
@@ -169,7 +171,7 @@ export default function BrasProductPage() {
 
             {/* Variant Selection */}
             {hasVariants && product.variants && selectedVariantId && (
-              <FadeIn delay={0.05}>
+              <FadeIn delay={0.05} immediate>
                 <div className="mt-6">
                   <VariantSelector
                     variants={product.variants}
@@ -186,7 +188,7 @@ export default function BrasProductPage() {
             )}
 
             {/* Color Selection */}
-            <FadeIn delay={0.1}>
+            <FadeIn delay={0.1} immediate>
               <div className="mt-7">
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-body text-[13px] text-ink">
@@ -203,7 +205,7 @@ export default function BrasProductPage() {
 
             {/* Size Selection */}
             {product.sizes.length > 1 && (
-              <FadeIn delay={0.15}>
+              <FadeIn delay={0.15} immediate>
                 <div className="mt-5">
                   <div className="flex items-center justify-between mb-3">
                     <span className="font-body text-[13px] text-ink">Size</span>
@@ -221,7 +223,7 @@ export default function BrasProductPage() {
             )}
 
             {product.sizes.length === 1 && (
-              <FadeIn delay={0.15}>
+              <FadeIn delay={0.15} immediate>
                 <div className="mt-5 flex items-center gap-2">
                   <span className="font-body text-[13px] text-ink">Size:</span>
                   <span className="font-body text-[13px] text-taupe">{product.sizes[0]}</span>
@@ -229,8 +231,8 @@ export default function BrasProductPage() {
               </FadeIn>
             )}
 
-            <FadeIn delay={0.2}>
-              <div className="mt-7">
+            <FadeIn delay={0.2} immediate>
+              <div ref={addToBagRef} className="mt-7">
                 <AddToBag disabled={!selectedSize} />
               </div>
             </FadeIn>
@@ -307,6 +309,17 @@ export default function BrasProductPage() {
           onSelect={handleVariantSelect}
         />
       )}
+
+      {/* Sticky Add to Bag bar — shows when main add-to-bag scrolls out of view */}
+      <PDPStickyBar
+        product={product}
+        selectedColor={selectedColor}
+        selectedSize={selectedSize}
+        activeColors={activeColors}
+        onColorSelect={setSelectedColor}
+        onSizeSelect={setSelectedSize}
+        addToBagRef={addToBagRef}
+      />
 
       {/* Complete the Look */}
       {relatedProducts.length > 0 && (

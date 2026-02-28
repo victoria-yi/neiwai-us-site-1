@@ -11,6 +11,8 @@ interface FadeInProps {
   distance?: number;
   className?: string;
   once?: boolean;
+  /** When true, animates on mount instead of when in view (for above-the-fold content) */
+  immediate?: boolean;
 }
 
 export default function FadeIn({
@@ -21,6 +23,7 @@ export default function FadeIn({
   distance = 20,
   className = '',
   once = true,
+  immediate = false,
 }: FadeInProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -56,8 +59,9 @@ export default function FadeIn({
   return (
     <motion.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once, margin: '-50px' }}
+      animate={immediate ? 'visible' : undefined}
+      whileInView={immediate ? undefined : 'visible'}
+      viewport={immediate ? undefined : { once, margin: '-50px' }}
       variants={variants}
       className={className}
     >
