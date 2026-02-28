@@ -20,7 +20,7 @@ export default function EditorialBreak({
           className="py-16 lg:py-24 px-8 text-center"
           style={{ background: gradient }}
         >
-          <blockquote className="font-display text-[24px] lg:text-[32px] font-light text-ink italic max-w-[600px] mx-auto leading-[1.35]">
+          <blockquote className="font-display text-[22px] lg:text-[28px] font-light text-ink italic max-w-[600px] mx-auto leading-[1.35]">
             {quote}
           </blockquote>
           {attribution && (

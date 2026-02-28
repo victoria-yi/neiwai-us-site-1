@@ -71,7 +71,7 @@ export default function Newsletter() {
         </FadeIn>
 
         <FadeIn delay={0.15}>
-          <h2 className="font-display text-[28px] lg:text-[36px] font-light text-ink">
+          <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink">
             Join our world
           </h2>
           <p className="font-body text-[14px] text-taupe mt-4 leading-relaxed">

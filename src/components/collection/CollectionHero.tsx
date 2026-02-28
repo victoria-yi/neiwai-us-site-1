@@ -59,7 +59,7 @@ export default function CollectionHero({
               {overline}
             </span>
           )}
-          <h1 className={`font-display text-[40px] lg:text-[56px] font-light ${image ? 'text-cream' : textBase} leading-[1.1]`}>
+          <h1 className={`font-display text-[36px] lg:text-[48px] font-light ${image ? 'text-cream' : textBase} leading-[1.1]`}>
             {headline}
           </h1>
           {subheadline && (

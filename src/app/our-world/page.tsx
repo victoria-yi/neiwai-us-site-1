@@ -20,10 +20,10 @@ export default function OurWorldPage() {
 
         <div className="relative w-full max-w-[1440px] mx-auto px-6 lg:px-20 pb-16 lg:pb-24">
           <FadeIn>
-            <p className="font-display text-[64px] lg:text-[96px] font-light text-cream/30 leading-none">
+            <p className="font-display text-[56px] lg:text-[80px] font-light text-cream/30 leading-none">
               内外
             </p>
-            <h1 className="font-display text-[36px] lg:text-[52px] font-light text-cream mt-2 leading-[1.1]">
+            <h1 className="font-display text-[32px] lg:text-[48px] font-light text-cream mt-2 leading-[1.1]">
               Inside and Outside
             </h1>
             <p className="font-body text-[16px] text-cream/70 mt-4 max-w-[400px]">
@@ -38,7 +38,7 @@ export default function OurWorldPage() {
         <div className="max-w-[720px] mx-auto">
           <FadeIn>
             <Overline>Our Philosophy</Overline>
-            <h2 className="font-display text-[32px] lg:text-[44px] font-light text-ink mt-6 leading-[1.2]">
+            <h2 className="font-display text-[28px] lg:text-[40px] font-light text-ink mt-6 leading-[1.2]">
               The harmony between inner comfort and outer beauty
             </h2>
           </FadeIn>
@@ -83,7 +83,7 @@ export default function OurWorldPage() {
 
         <div className="max-w-[720px] mx-auto mt-20 lg:mt-32">
           <FadeIn>
-            <h2 className="font-display text-[28px] lg:text-[36px] font-light text-ink leading-[1.25]">
+            <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink leading-[1.25]">
               An Eastern design sensibility
             </h2>
           </FadeIn>
@@ -127,7 +127,7 @@ export default function OurWorldPage() {
             <div className="w-full lg:w-1/2">
               <FadeIn>
                 <Overline>The Atelier</Overline>
-                <h2 className="font-display text-[28px] lg:text-[36px] font-light text-ink mt-4 leading-[1.25]">
+                <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink mt-4 leading-[1.25]">
                   Where material science meets intention
                 </h2>
               </FadeIn>
@@ -163,7 +163,7 @@ export default function OurWorldPage() {
         <div className="max-w-[720px] mx-auto">
           <FadeIn>
             <Overline>Considered Practices</Overline>
-            <h2 className="font-display text-[28px] lg:text-[36px] font-light text-ink mt-4">
+            <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink mt-4">
               Made with intention
             </h2>
           </FadeIn>

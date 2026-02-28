@@ -1,41 +1,37 @@
 import HeroSection from '@/components/home/HeroSection';
-import BarelyZeroStory from '@/components/home/BarelyZeroStory';
-import ScallopStory from '@/components/home/ScallopStory';
-import CuratedGrid from '@/components/home/CuratedGrid';
+import FeaturedBras from '@/components/home/FeaturedBras';
+import CompleteTheSet from '@/components/home/CompleteTheSet';
 import BrandMoment from '@/components/home/BrandMoment';
-import LivingCollection from '@/components/home/LivingCollection';
-import InTheWorld from '@/components/home/InTheWorld';
+import BestSellers from '@/components/home/BestSellers';
 import Testimonial from '@/components/home/Testimonial';
+import InTheWorld from '@/components/home/InTheWorld';
 import Newsletter from '@/components/home/Newsletter';
 
 export default function HomePage() {
   return (
     <>
-      {/* Section 1: Hero */}
+      {/* 1. Hero */}
       <HeroSection />
 
-      {/* Section 2: Barely Zero Story — the original */}
-      <BarelyZeroStory />
+      {/* 2. Featured Bras — side by side */}
+      <FeaturedBras />
 
-      {/* Section 3: Scallop Bra — hero growth product */}
-      <ScallopStory />
+      {/* 3. Complete the Set — bra + brief pairing */}
+      <CompleteTheSet />
 
-      {/* Section 4: Curated Editorial Grid */}
-      <CuratedGrid />
-
-      {/* Section 4: Brand World Moment */}
+      {/* 4. Brand Philosophy */}
       <BrandMoment />
 
-      {/* Section 5: Living Collection */}
-      <LivingCollection />
+      {/* 5. Briefs & Leggings — 3 best sellers */}
+      <BestSellers />
 
-      {/* Section 6: In the World */}
-      <InTheWorld />
-
-      {/* Section 7: Curated Testimonial */}
+      {/* 6. Customer Reviews — rotating */}
       <Testimonial />
 
-      {/* Section 8: Newsletter + Press */}
+      {/* 7. In the World */}
+      <InTheWorld />
+
+      {/* 8. Newsletter */}
       <Newsletter />
     </>
   );

@@ -35,7 +35,7 @@ export default function ScallopStory() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h2 className="font-display text-[32px] lg:text-[40px] font-light text-ink mt-4 leading-[1.15]">
+            <h2 className="font-display text-[28px] lg:text-[36px] font-light text-ink mt-4 leading-[1.15]">
               The scallop that holds its shape.
             </h2>
           </FadeIn>

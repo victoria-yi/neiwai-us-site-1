@@ -44,7 +44,7 @@ export default function JournalPage() {
       <section className="pt-28 lg:pt-36 pb-16 lg:pb-24 px-6 lg:px-20 max-w-[1440px] mx-auto">
         <FadeIn>
           <Overline>Our World</Overline>
-          <h1 className="font-display text-[40px] lg:text-[56px] font-light text-ink mt-4 leading-[1.1]">
+          <h1 className="font-display text-[36px] lg:text-[48px] font-light text-ink mt-4 leading-[1.1]">
             Journal
           </h1>
           <p className="font-body text-[16px] text-taupe mt-4 max-w-[480px]">
@@ -75,7 +75,7 @@ export default function JournalPage() {
                     {journalEntries[0].date}
                   </span>
                 </div>
-                <h2 className="font-display text-[24px] lg:text-[28px] font-light text-ink leading-[1.25] group-hover:text-accent transition-colors duration-300">
+                <h2 className="font-display text-[22px] lg:text-[24px] font-light text-ink leading-[1.25] group-hover:text-accent transition-colors duration-300">
                   {journalEntries[0].title}
                 </h2>
                 <p className="font-body text-[14px] text-taupe mt-2 leading-relaxed max-w-[500px]">
@@ -104,7 +104,7 @@ export default function JournalPage() {
                       <Overline>{entry.category}</Overline>
                       <span className="font-body text-[11px] text-stone">{entry.date}</span>
                     </div>
-                    <h3 className="font-display text-[20px] font-light text-ink leading-[1.3] group-hover:text-accent transition-colors duration-300">
+                    <h3 className="font-display text-[18px] font-light text-ink leading-[1.3] group-hover:text-accent transition-colors duration-300">
                       {entry.title}
                     </h3>
                     <p className="font-body text-[13px] text-taupe mt-1.5 leading-relaxed">
@@ -134,7 +134,7 @@ export default function JournalPage() {
                 <Overline>{journalEntries[3].category}</Overline>
                 <span className="font-body text-[11px] text-stone">{journalEntries[3].date}</span>
               </div>
-              <h2 className="font-display text-[24px] lg:text-[28px] font-light text-ink leading-[1.25] group-hover:text-accent transition-colors duration-300">
+              <h2 className="font-display text-[22px] lg:text-[24px] font-light text-ink leading-[1.25] group-hover:text-accent transition-colors duration-300">
                 {journalEntries[3].title}
               </h2>
               <p className="font-body text-[14px] text-taupe mt-2 leading-relaxed max-w-[600px]">

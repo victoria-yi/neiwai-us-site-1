@@ -50,7 +50,7 @@ export default function AtelierPage() {
         <div className="relative w-full max-w-[1440px] mx-auto px-6 lg:px-20 pb-16">
           <FadeIn>
             <Overline className="text-cream/60">Our World</Overline>
-            <h1 className="font-display text-[40px] lg:text-[56px] font-light text-cream mt-3 leading-[1.1]">
+            <h1 className="font-display text-[36px] lg:text-[48px] font-light text-cream mt-3 leading-[1.1]">
               The Atelier
             </h1>
             <p className="font-body text-[16px] text-cream/70 mt-3 max-w-[480px]">
@@ -87,7 +87,7 @@ export default function AtelierPage() {
                   <span className="font-body text-[12px] text-taupe tracking-wide">
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                  <h2 className="font-display text-[28px] lg:text-[36px] font-light text-ink mt-2">
+                  <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink mt-2">
                     {step.title}
                   </h2>
                   <p className="font-body text-[15px] text-taupe mt-4 leading-[1.8] max-w-[440px]">
@@ -103,7 +103,7 @@ export default function AtelierPage() {
       {/* Closing statement */}
       <section className="py-24 lg:py-32 px-6 text-center bg-sand/30">
         <FadeIn>
-          <blockquote className="font-display text-[28px] lg:text-[40px] font-light text-ink italic max-w-[700px] mx-auto leading-[1.35]">
+          <blockquote className="font-display text-[24px] lg:text-[36px] font-light text-ink italic max-w-[700px] mx-auto leading-[1.35]">
             &ldquo;Every piece begins with the question: can you feel nothing at all?&rdquo;
           </blockquote>
         </FadeIn>

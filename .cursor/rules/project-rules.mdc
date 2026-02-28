@@ -1,0 +1,46 @@
+---
+description: Rules for AI assistance - project workflow, edit vs answer, code ops, tools
+alwaysApply: true
+---
+
+# Rules for AI Assistance (Cursor)
+
+Rules that govern how the AI agent operates when working on this project.
+
+---
+
+## Project-Specific Rules
+
+### After-Edit Workflow
+
+**After each edit**, deploy locally and open in Cursor's browser:
+
+1. **Deploy locally** – Run `npm run dev` (or ensure it's already running). The app serves on port 3000, or 3001 if 3000 is in use.
+2. **Open in Cursor browser** – Use the cursor-ide-browser MCP `browser_navigate` tool with `position: "side"` to open the app in the side panel (e.g. `http://localhost:3000` or `http://localhost:3001`).
+3. **Report the URL** – Tell the user the localhost URL so they can review the changes.
+4. **Check for errors** – If you see an error overlay in the browser (e.g. "Hydration failed", "Recoverable Error", "Console Error" about server/client mismatch), investigate and fix it. Common causes: `typeof window !== 'undefined'` branches, `Date.now()`/`Math.random()`, controlled inputs with mismatched initial state, or URL/search params differing between server and client.
+
+---
+
+## General Rules
+
+### When to Edit vs. Answer
+
+- **Don't over-edit** – If the user is asking a question or wants an explanation, answer it instead of changing code.
+- **Edit only when appropriate** – Make edits when the user clearly requests changes, fixes, or new features.
+
+### Code & File Operations
+
+- **Prefer editing over creating** – Edit existing files instead of creating new ones unless the user explicitly asks for new files.
+- **Avoid unnecessary files** – Don't create documentation (e.g. README, *.md) unless the user asks for it.
+- **No binary/long hashes** – Don't generate long hashes or non-textual binary content in responses.
+
+### Tool Usage
+
+- **Use tools, not shell for file ops** – Use `read_file`, `search_replace`, `write`, `grep`, etc. instead of `cat`, `sed`, `head`, `tail` for file operations.
+- **Use `rg` over `grep`** – Prefer ripgrep when running search commands in the terminal.
+
+### Communication
+
+- **Be direct** – Prefer clear, concise responses.
+- **Use markdown** – Format file names, paths, and code with backticks; use \( \) for inline math and \[ \] for block math.

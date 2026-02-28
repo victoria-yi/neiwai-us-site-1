@@ -14,7 +14,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [announcementVisible, setAnnouncementVisible] = useState(true);
   const pathname = usePathname();
-  const isHome = pathname === '/';
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ export default function Navbar() {
     return () => window.removeEventListener('announcement-dismissed', handleDismiss);
   }, []);
 
-  const navTop = announcementVisible ? 'top-[32px]' : 'top-0';
+  const navTop = scrolled ? 'top-0' : (announcementVisible ? 'top-[32px]' : 'top-0');
 
   // Close mobile nav on route change
   useEffect(() => {
@@ -77,11 +76,13 @@ export default function Navbar() {
     setHoveredMenu(null);
   };
 
-  const navBg = scrolled || !isHome || hoveredMenu
+  const isHome = pathname === '/';
+
+  const navBg = scrolled || hoveredMenu
     ? 'bg-cream/95 backdrop-blur-md border-b border-sand/50'
     : 'bg-transparent';
 
-  const textColor = scrolled || !isHome || hoveredMenu ? 'text-ink' : 'text-cream';
+  const textColor = scrolled || hoveredMenu || !isHome ? 'text-ink' : 'text-cream';
 
   return (
     <>
@@ -121,6 +122,18 @@ export default function Navbar() {
                 </Link>
               </div>
             ))}
+            <Link
+              href="/sale"
+              onMouseEnter={() => setHoveredMenu(null)}
+              className={`font-body text-[14px] font-normal tracking-wide transition-opacity duration-300 hover:opacity-80 ${
+                pathname === '/sale'
+                  ? 'relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-[#C25835]'
+                  : ''
+              }`}
+              style={{ color: '#C25835' }}
+            >
+              Sale
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -137,7 +150,7 @@ export default function Navbar() {
           {/* Center Logo */}
           <Link
             href="/"
-            className={`font-display text-[20px] font-light tracking-[0.2em] transition-colors duration-300 ${textColor} absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 lg:text-center lg:flex-1 lg:flex lg:justify-center`}
+            className={`font-display text-[18px] font-light tracking-[0.2em] transition-colors duration-300 ${textColor} absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 lg:text-center lg:flex-1 lg:flex lg:justify-center`}
           >
             NEIWAI
           </Link>

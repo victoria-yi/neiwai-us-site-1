@@ -25,11 +25,13 @@ export default function ProductAccordion({ items }: ProductAccordionProps) {
           >
             <span>{item.title}</span>
             <motion.span
-              animate={{ rotate: openIndex === index ? 45 : 0 }}
+              animate={{ rotate: openIndex === index ? 180 : 0 }}
               transition={{ duration: 0.3 }}
-              className="text-[18px] text-taupe"
+              className="text-taupe flex-shrink-0"
             >
-              +
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 5l4 4 4-4" />
+              </svg>
             </motion.span>
           </button>
 

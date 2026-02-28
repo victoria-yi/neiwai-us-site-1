@@ -1,6 +1,6 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  transpilePackages: ['framer-motion'],
   images: {
     remotePatterns: [
       {
@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.shopify.com',
       },
     ],
-    // Allow image optimization from CDNs that may resolve to private IPs in dev
     dangerouslyAllowSVG: false,
     unoptimized: process.env.NODE_ENV === 'development',
   },

@@ -49,7 +49,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           >
             {/* Close button */}
             <div className="flex items-center justify-between px-6 h-[60px]">
-              <span className="font-display text-cream text-[20px] font-light tracking-[0.2em]">
+              <span className="font-display text-cream text-[18px] font-light tracking-[0.2em]">
                 NEIWAI
               </span>
               <button
@@ -74,12 +74,12 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   <Link
                     href="/"
                     onClick={onClose}
-                    className="block py-4 font-display text-[28px] font-light text-cream tracking-wide hover:text-blush transition-colors duration-300"
+                    className="block py-4 font-display text-[24px] font-light text-cream tracking-wide hover:text-blush transition-colors duration-300"
                   >
                     Home
                   </Link>
                 </motion.li>
-                {allLinks.map((link, index) => {
+                {navLinks.left.map((link, index) => {
                   const menuKey = megaMenuKeys[link.label];
                   const hasSubmenu = !!menuKey;
                   const menuData = menuKey ? megaMenuData[menuKey] : null;
@@ -96,7 +96,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                         <div>
                           <button
                             onClick={() => toggleExpand(link.label)}
-                            className="w-full flex items-center justify-between py-4 font-display text-[28px] font-light text-cream tracking-wide"
+                            className="w-full flex items-center justify-between py-4 font-display text-[24px] font-light text-cream tracking-wide"
                           >
                             <span>{link.label}</span>
                             <motion.span
@@ -147,11 +147,43 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                         <Link
                           href={link.href}
                           onClick={onClose}
-                          className="block py-4 font-display text-[28px] font-light text-cream tracking-wide hover:text-blush transition-colors duration-300"
+                          className="block py-4 font-display text-[24px] font-light text-cream tracking-wide hover:text-blush transition-colors duration-300"
                         >
                           {link.label}
                         </Link>
                       )}
+                    </motion.li>
+                  );
+                })}
+                <motion.li
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.12 + navLinks.left.length * 0.05, duration: 0.4 }}
+                >
+                  <Link
+                    href="/sale"
+                    onClick={onClose}
+                    className="block py-4 font-display text-[24px] font-light tracking-wide hover:opacity-80 transition-opacity duration-300"
+                    style={{ color: '#C25835' }}
+                  >
+                    Sale
+                  </Link>
+                </motion.li>
+                {navLinks.right.map((link, index) => {
+                  return (
+                    <motion.li
+                      key={link.label}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.15 + (navLinks.left.length + 1 + index) * 0.05, duration: 0.4 }}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={onClose}
+                        className="block py-4 font-display text-[24px] font-light text-cream tracking-wide hover:text-blush transition-colors duration-300"
+                      >
+                        {link.label}
+                      </Link>
                     </motion.li>
                   );
                 })}

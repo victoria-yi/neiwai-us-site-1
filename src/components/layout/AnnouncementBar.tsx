@@ -25,14 +25,14 @@ export default function AnnouncementBar() {
           animate={{ height: 32, opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="relative flex items-center justify-center bg-sand text-ink overflow-hidden"
+          className="relative flex items-center justify-center bg-charcoal text-cream overflow-hidden"
         >
           <p className="font-body text-[11px] tracking-wide">
             Complimentary U.S. shipping on orders above $99
           </p>
           <button
             onClick={dismiss}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-taupe hover:text-ink transition-colors duration-300"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-stone hover:text-cream transition-colors duration-300"
             aria-label="Dismiss announcement"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">

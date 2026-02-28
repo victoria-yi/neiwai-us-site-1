@@ -39,7 +39,7 @@ export default function LeggingsProductPage() {
     return (
       <div className="min-h-screen flex items-center justify-center pt-20">
         <div className="text-center">
-          <h1 className="font-display text-[32px] font-light text-ink">Product not found</h1>
+          <h1 className="font-display text-[28px] font-light text-ink">Product not found</h1>
           <Link href="/leggings" className="font-body text-[14px] text-accent mt-4 inline-block hover:underline">
             Return to Leggings &rarr;
           </Link>
@@ -91,7 +91,7 @@ export default function LeggingsProductPage() {
             <FadeIn>
               <Overline>Barely Zero</Overline>
 
-              <h1 className="font-display text-[24px] lg:text-[28px] font-light text-ink mt-3">
+              <h1 className="font-display text-[22px] lg:text-[24px] font-light text-ink mt-3">
                 {product.name}
               </h1>
 

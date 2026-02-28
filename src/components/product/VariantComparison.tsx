@@ -22,7 +22,7 @@ export default function VariantComparison({
     <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-16 lg:py-24 border-t border-sand">
       <FadeIn>
         <Overline>Choose Your Style</Overline>
-        <h2 className="font-display text-[28px] lg:text-[36px] font-light text-ink mt-4">
+        <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink mt-4">
           Same sculpted cup. Two closure options.
         </h2>
         <p className="font-body text-[14px] text-taupe mt-3 max-w-lg leading-relaxed">
@@ -64,7 +64,7 @@ export default function VariantComparison({
 
                 {/* Label area */}
                 <div className="mt-4">
-                  <h3 className="font-display text-[20px] lg:text-[22px] font-light text-ink">
+                  <h3 className="font-display text-[18px] lg:text-[20px] font-light text-ink">
                     {variant.label}
                   </h3>
                   <p className="font-body text-[13px] text-taupe mt-1">

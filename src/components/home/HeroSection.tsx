@@ -32,7 +32,7 @@ export default function HeroSection({
       {/* Background Image with Parallax */}
       <motion.div
         style={{ y }}
-        className="absolute inset-0 scale-110"
+        className="absolute inset-0 scale-110 bg-charcoal/30"
       >
         <Image
           src="https://neiwai.life/cdn/shop/files/20250908-131826.png?v=1757362737&width=2160"
@@ -42,6 +42,8 @@ export default function HeroSection({
           priority
           sizes="100vw"
           quality={95}
+          placeholder="empty"
+          unoptimized
         />
       </motion.div>
 
@@ -57,7 +59,7 @@ export default function HeroSection({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-display text-[36px] sm:text-[48px] lg:text-[64px] xl:text-[72px] font-light text-cream tracking-wide leading-[1.1] max-w-[800px]"
+          className="font-display text-[32px] sm:text-[44px] lg:text-[56px] xl:text-[64px] font-light text-cream tracking-wide leading-[1.1] max-w-[800px]"
         >
           {headline}
         </motion.h1>
@@ -66,7 +68,7 @@ export default function HeroSection({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-          className="mt-5 font-body text-[15px] lg:text-[17px] text-cream/80 tracking-wide max-w-[480px]"
+          className="mt-5 font-body text-[15px] lg:text-[17px] text-cream/80 tracking-wide lg:whitespace-nowrap"
         >
           {subheadline}
         </motion.p>

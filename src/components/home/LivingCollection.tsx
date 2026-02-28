@@ -33,7 +33,7 @@ export default function LivingCollection() {
           <div className="absolute inset-0 flex flex-col items-start justify-end pb-12 lg:pb-16 px-6 lg:px-20 max-w-[1440px] mx-auto">
             <FadeIn>
               <Overline className="text-cream/70">Complete the Set</Overline>
-              <h2 className="font-display text-[36px] lg:text-[52px] font-light text-cream mt-3 leading-[1.1]">
+              <h2 className="font-display text-[32px] lg:text-[48px] font-light text-cream mt-3 leading-[1.1]">
                 Briefs &amp; Leggings
               </h2>
             </FadeIn>
