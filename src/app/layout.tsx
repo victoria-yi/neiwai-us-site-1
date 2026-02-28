@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
+import { DM_Sans, Cormorant_Garamond } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Footer from '@/components/layout/Footer';
@@ -7,7 +7,7 @@ import './globals.css';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  weight: ['300', '400', '500', '600'],
   variable: '--font-numbers',
   display: 'swap',
 });
@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{

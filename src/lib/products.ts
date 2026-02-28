@@ -19,6 +19,8 @@ export interface TechnologyFeature {
   headline: string;
   description: string;
   image?: string;
+  /** CSS object-position for cropping (e.g. 'center bottom' to hide top) */
+  imagePosition?: string;
   icon?: 'invisible' | 'molding' | 'stretch' | 'breathe' | 'durability' | 'anchor' | 'comfort';
 }
 
@@ -122,21 +124,22 @@ export const brasProducts: Product[] = [
         number: '01',
         headline: 'Adaptive Fit Technology',
         description: 'One-size construction that conforms to different body shapes without adjustment — the fabric works with your body, not against it.',
-        image: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI16738.jpg?v=1762136724&width=800',
+        image: '/images/adaptive-fit-two-women.png',
+        imagePosition: 'center 45%',
         icon: 'stretch',
       },
       {
         number: '02',
         headline: 'Anchored Cup Support',
         description: 'Cups secured at the base stay positioned through movement — soft, natural shaping that doesn\'t shift, slide, or compress from morning to night.',
-        image: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI17296.jpg?v=1762145917&width=800',
+        image: '/images/anchored-cup-support-light.png',
         icon: 'anchor',
       },
       {
         number: '03',
         headline: 'Invisible by Construction',
         description: 'No underwire, no foam padding, no hardware — fully seamless exterior. Pairs invisibly under any layer.',
-        image: 'https://neiwai.life/cdn/shop/files/0216NEIWAI32441.jpg?v=1762136724&width=800',
+        image: '/images/invisible-by-construction-still-life.png',
         icon: 'invisible',
       },
     ],
@@ -283,21 +286,23 @@ export const brasProducts: Product[] = [
         number: '01',
         headline: 'Invisible by Design',
         description: 'Scalloped V-neckline with fixed cups that maintain shape throughout the day. Pull-on construction — no clasps, no underwire, no adjustment.',
-        image: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI158792.jpg?v=1764127456&width=800',
+        image: '/images/invisible-by-design-still-life.png',
         icon: 'invisible',
       },
       {
         number: '02',
         headline: 'Fixed Cup Construction',
         description: 'Precision-molded fixed cups bonded to the lining — zero shift, zero seams on skin. Shape that holds position all day without slipping.',
-        image: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI162012_eccd6926-58ef-4a36-9ddd-f76beec553d9.jpg?v=1764127456&width=800',
+        image: '/images/fixed-cup-construction-still-life.png',
+        imagePosition: 'center 42%',
         icon: 'molding',
       },
       {
         number: '03',
         headline: 'CloudFit Stretch',
         description: 'Seamless side panels for a smooth line under fitted tops. Adjustable straps for personalized fit, zero restriction.',
-        image: 'https://neiwai.life/cdn/shop/files/2025-08-28NEIWAI178131.jpg?v=1762145975&width=800',
+        image: '/images/cloudfit-stretch-still-life.png',
+        imagePosition: 'center 42%',
         icon: 'stretch',
       },
     ],

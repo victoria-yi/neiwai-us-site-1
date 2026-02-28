@@ -41,7 +41,7 @@ export default function ProductGallery({ product, selectedColor }: ProductGaller
               alt={`${product.name}${selectedColor ? ` in ${selectedColor}` : ''} — image ${activeIndex + 1}`}
               fill
               className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="(max-width: 1024px) 100vw, 42vw"
               priority={activeIndex === 0}
             />
           </motion.div>

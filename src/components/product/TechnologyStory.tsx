@@ -15,10 +15,10 @@ export default function TechnologyStory({ features, productName }: TechnologySto
   return (
     <section className="bg-warm-white">
       {/* Section header — centered */}
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 pt-16 lg:pt-24 pb-12 lg:pb-16 text-center">
-        <FadeIn>
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 pt-16 lg:pt-24 pb-12 lg:pb-16">
+        <FadeIn className="w-full text-center">
           <Overline>The Technology</Overline>
-          <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink mt-4 max-w-2xl mx-auto whitespace-nowrap">
+          <h2 className="font-display text-[24px] lg:text-[32px] font-light text-ink mt-4 max-w-2xl mx-auto">
             What makes the {productName} different
           </h2>
           <p className="font-body text-[14px] text-stone mt-4 max-w-xl mx-auto leading-snug">
@@ -51,6 +51,7 @@ export default function TechnologyStory({ features, productName }: TechnologySto
                       alt={`${feature.headline} — ${productName}`}
                       fill
                       className="object-cover"
+                      style={feature.imagePosition ? { objectPosition: feature.imagePosition } : undefined}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>

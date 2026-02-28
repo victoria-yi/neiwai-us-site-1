@@ -69,29 +69,28 @@ export default function LeggingsProductPage() {
 
   return (
     <div className="pt-20 lg:pt-24">
-      {/* Breadcrumb */}
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-4">
-        <nav className="font-body text-[12px] text-taupe flex items-center gap-2">
-          <Link href="/" className="hover:text-ink transition-colors duration-300">Home</Link>
-          <span>/</span>
-          <Link href="/leggings" className="hover:text-ink transition-colors duration-300">Leggings</Link>
-          <span>/</span>
-          <span className="text-ink">{product.name}</span>
-        </nav>
-      </div>
-
-      {/* PDP Split Layout */}
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 pb-16 lg:pb-24">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-          {/* Gallery — 55% */}
-          <div className="w-full lg:w-[55%]">
-            <ProductGallery product={product} selectedColor={selectedColor} />
+      {/* PDP Split Layout — Gallery right edge aligns with page center (50vw) */}
+      <div className="w-full pb-16 lg:pb-24">
+        <div className="flex flex-col lg:flex-row">
+          {/* Left column — breadcrumb above gallery, left-aligned with main image */}
+          <div className="w-full lg:w-[50vw] lg:pl-6 lg:pr-8 shrink-0 flex lg:justify-end">
+            <div className="w-full lg:w-[84%]">
+              <nav className="font-body text-[12px] text-taupe flex items-center gap-2 px-6 lg:px-0 mb-4">
+                <Link href="/" className="hover:text-ink transition-colors duration-300">Home</Link>
+                <span>/</span>
+                <Link href="/leggings" className="hover:text-ink transition-colors duration-300">Leggings</Link>
+                <span>/</span>
+                <span className="text-ink">{product.name}</span>
+              </nav>
+              <ProductGallery product={product} selectedColor={selectedColor} />
+            </div>
           </div>
 
-          {/* Product Info — 45% */}
-          <div className="w-full lg:w-[45%] lg:sticky lg:top-24 lg:self-start">
+          {/* Product Info — top aligns with main image (offset for breadcrumb above image) */}
+          <div className="w-full lg:flex-1 lg:min-w-0 px-6 lg:pl-[163px] lg:pr-20 lg:pt-8 lg:sticky lg:top-24 lg:self-start">
+            <div className="lg:max-w-[400px]">
             <FadeIn immediate>
-              <Overline>Barely Zero</Overline>
+              <Overline className="text-[9px] mt-[5px]">Barely Zero</Overline>
 
               <h1 className="font-display text-[22px] lg:text-[24px] font-light text-ink mt-3">
                 {product.name}
@@ -101,7 +100,7 @@ export default function LeggingsProductPage() {
                 {formatPrice(product.price)}
               </p>
 
-              <p className="font-body text-[15px] text-taupe mt-4 leading-relaxed">
+              <p className="font-body text-[14px] text-taupe mt-4 leading-relaxed">
                 {product.description}
               </p>
 
@@ -210,6 +209,7 @@ export default function LeggingsProductPage() {
                 </p>
               </div>
             </FadeIn>
+            </div>
           </div>
         </div>
       </div>

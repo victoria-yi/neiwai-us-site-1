@@ -90,9 +90,10 @@ export default function Navbar() {
         className={`fixed ${navTop} left-0 right-0 z-50 transition-all duration-500 ${navBg}`}
         onMouseLeave={handleHeaderLeave}
       >
-        <nav className="max-w-[1440px] mx-auto px-6 lg:px-20 h-[60px] lg:h-[72px] flex items-center justify-between">
-          {/* Left Nav — Desktop */}
-          <div className="hidden lg:flex items-center gap-8 flex-1">
+        <nav className="w-full px-6 lg:px-0 h-[60px] lg:h-[72px] flex items-center justify-between lg:justify-between relative">
+          {/* Left Nav — Desktop: 50vw column, 84% content right-aligned (matches PDP) */}
+          <div className="hidden lg:flex lg:w-[50vw] lg:pl-6 shrink-0 justify-end">
+            <div className="lg:w-[84%] flex items-center gap-8">
             <Link
               href="/"
               onMouseEnter={() => setHoveredMenu(null)}
@@ -134,6 +135,7 @@ export default function Navbar() {
             >
               Sale
             </Link>
+            </div>
           </div>
 
           {/* Mobile Hamburger */}
@@ -147,18 +149,19 @@ export default function Navbar() {
             </svg>
           </button>
 
-          {/* Center Logo */}
+          {/* Center Logo — always centered */}
           <Link
             href="/"
-            className={`font-display text-[18px] font-light tracking-[0.2em] transition-colors duration-300 ${textColor} absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 lg:text-center lg:flex-1 lg:flex lg:justify-center`}
+            className={`font-display text-[18px] font-light tracking-[0.2em] transition-colors duration-300 ${textColor} absolute left-1/2 -translate-x-1/2`}
           >
             NEIWAI
           </Link>
 
-          {/* Right Nav */}
-          <div className="flex items-center gap-6 lg:gap-8 flex-1 justify-end">
-            {/* Our World — Desktop only */}
-            <Link
+          {/* Right Nav — Desktop: 50vw column, 84% content left-aligned (matches PDP) */}
+          <div className="flex items-center gap-6 lg:gap-8 flex-1 justify-end lg:flex-initial lg:w-[50vw] lg:pr-6 lg:justify-start">
+            <div className="hidden lg:flex lg:w-[84%] items-center gap-6 justify-end">
+              {/* Our World — Desktop only */}
+              <Link
               href="/our-world"
               onMouseEnter={() => setHoveredMenu(null)}
               className={`hidden lg:inline-block font-body text-[14px] font-normal tracking-wide transition-colors duration-300 hover:text-accent ${textColor} ${
@@ -166,27 +169,27 @@ export default function Navbar() {
                   ? 'relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-accent'
                   : ''
               }`}
-            >
-              Our World
-            </Link>
+              >
+                Our World
+              </Link>
 
-            {/* Search */}
-            <button
+              {/* Search */}
+              <button
               onMouseEnter={() => setHoveredMenu(null)}
               className={`transition-colors duration-300 hover:text-accent ${textColor}`}
               aria-label="Search"
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="8.5" cy="8.5" r="6" />
-                <path d="M13 13l5 5" />
-              </svg>
-            </button>
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="8.5" cy="8.5" r="6" />
+                  <path d="M13 13l5 5" />
+                </svg>
+              </button>
 
-            {/* Account — Desktop */}
-            <button
-              className={`hidden lg:block transition-colors duration-300 hover:text-accent ${textColor}`}
-              aria-label="Account"
-            >
+              {/* Account — Desktop */}
+              <button
+                className={`hidden lg:block transition-colors duration-300 hover:text-accent ${textColor}`}
+                aria-label="Account"
+              >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <circle cx="10" cy="7" r="4" />
                 <path d="M2 19c0-4.418 3.582-8 8-8s8 3.582 8 8" />
@@ -206,6 +209,25 @@ export default function Navbar() {
                 0
               </span>
             </button>
+            </div>
+            {/* Mobile: show icons directly */}
+            <div className="flex lg:hidden items-center gap-6">
+              <button className={`transition-colors duration-300 hover:text-accent ${textColor}`} aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="8.5" cy="8.5" r="6" />
+                  <path d="M13 13l5 5" />
+                </svg>
+              </button>
+              <button className={`relative transition-colors duration-300 hover:text-accent ${textColor}`} aria-label="Shopping bag">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M4 6h12l1 12H3L4 6z" />
+                  <path d="M7 6V4a3 3 0 016 0v2" />
+                </svg>
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-accent text-cream text-[10px] flex items-center justify-center font-body font-medium">
+                  0
+                </span>
+              </button>
+            </div>
           </div>
         </nav>
 

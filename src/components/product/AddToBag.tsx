@@ -53,7 +53,7 @@ export default function AddToBag({ disabled = false, onAdd, compact = false }: A
     <motion.button
       onClick={handleClick}
       disabled={disabled || state !== 'idle'}
-      className={`w-full max-w-[320px] h-[46px] font-body text-[13px] tracking-[0.06em] transition-all duration-300 border ${
+      className={`w-full h-[46px] font-body text-[13px] tracking-[0.06em] transition-all duration-300 border ${
         disabled
           ? 'bg-cream text-stone border-sand cursor-not-allowed'
           : state === 'success'
